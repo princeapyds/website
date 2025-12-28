@@ -162,5 +162,9 @@ img {
     max-width: 100%;
     height: auto;
 }
+nav a.active {
+    color: #ff7a00;
+    font-weight: bold;
+}
 
 
