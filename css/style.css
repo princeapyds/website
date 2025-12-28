@@ -42,8 +42,8 @@ section h2 { text-align:center; margin-bottom:40px; font-size:2.2em; color: var(
 
 /* Contact */
 .contact form { display:flex; flex-direction:column; max-width:500px; margin:auto; }
-.contact input, .contact textarea { padding:12px; margin-bottom:20px; border-radius:5px; border:1px solid #ccc; font-size:1em; }
-.contact button { background: var(--primary-blue); color:#fff; border:none; padding:12px; font-size:1em; font-weight:bold; border-radius:5px; cursor:pointer; transition:.3s; }
+.contact input, .contact textarea { padding:12px; margin-bottom:20px; border-radius:5px; border:1px solid #ccc; font-size:1em;width: 100%;max-width: 100%;}
+.contact button { background: var(--primary-blue); color:#fff; border:none; padding:12px; font-size:1em; font-weight:bold; border-radius:5px; cursor:pointer; transition:.3s;;width: 100%;max-width: 100%; }
 .contact button:hover { background: var(--secondary-orange); }
 
 /* Responsive */
@@ -72,4 +72,95 @@ section h2 { text-align:center; margin-bottom:40px; font-size:2.2em; color: var(
     color: #ff7a00;
     text-decoration: none;
 }
+
+/* =========================
+   Global Responsive Fix
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    flex-wrap: wrap;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* =========================
+   Contact Page
+========================= */
+
+.contact-container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.contact form,
+.address-box {
+    width: 100%;
+}
+
+/* =========================
+   Mobile Screens
+========================= */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .contact-container {
+        flex-direction: column;
+    }
+
+    section {
+        padding: 40px 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 
