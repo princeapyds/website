@@ -10,6 +10,32 @@
 
     <!-- Shared CSS -->
     <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .contact-container {
+            display: flex;
+            gap: 40px;
+            max-width: 1100px;
+            margin: auto;
+            align-items: stretch;
+            flex-wrap: wrap;
+        }
+
+        .contact form,
+        .map {
+            flex: 1;
+            min-width: 320px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .map iframe {
+            flex: 1;
+            width: 100%;
+            border: 0;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
 
@@ -28,21 +54,33 @@
 <section class="contact">
     <h2>Contact Us</h2>
 
-    <form action="https://formsubmit.co/contact@automindaitechnologies.com" method="POST">
+    <div class="contact-container">
 
-        <!-- FormSubmit settings -->
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_subject" value="New Contact Form Submission - AutoMind AI">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_next" value="https://automindaitechnologies.com/thankyou.html">
+        <!-- Contact Form -->
+        <form action="https://formsubmit.co/contact@automindaitechnologies.com" method="POST">
 
-        <!-- Form fields -->
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="New Contact Form Submission - AutoMind AI">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="https://automindaitechnologies.com/thankyou.html">
 
-        <button type="submit">Send Message</button>
-    </form>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+
+        <!-- Google Map -->
+        <div class="map">
+            <iframe
+                src="https://www.google.com/maps?q=Baner,Pune,India&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+
+    </div>
 </section>
 
 <!-- Footer -->
