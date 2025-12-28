@@ -52,3 +52,24 @@ section h2 { text-align:center; margin-bottom:40px; font-size:2.2em; color: var(
     .hero p { font-size:1em; }
     .about { flex-direction:column; }
 }
+.address-box {
+    flex: 1;
+    min-width: 320px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.address-box h3 {
+    margin-bottom: 15px;
+    color: #0056b3;
+}
+
+.address-box a {
+    color: #ff7a00;
+    text-decoration: none;
+}
+
